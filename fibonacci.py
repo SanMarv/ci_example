@@ -1,8 +1,9 @@
 def fibonacci(a: int):
-    if a == 0: 
-        return 0
-    elif a == 1: 
-        return 1 
-    
-    return fibonacci(a - 1) + fibonacci(a - 2)
+    fib_list = [0] * a
+    fib_list[0] = 1
+    fib_list[1] = 1
+    result = 0
+    for i in range(2, a): 
+        result += fib_list[i - 1] + fib_list[i - 2]
 
+    return result
